@@ -1,0 +1,63 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+log/*
+tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, coverage, and cache.
+*.pid
+*.pid.lock
+coverage/*
+.cache
+
+# Ignore dotenv environment files
+.env
+.env.*
+
+# Ignore database config (if you keep sensitive data there)
+config/database.yml
+
+# Ignore master.key/credentials (セキュリティ超重要)
+config/master.key
+config/credentials.yml.enc
+
+# Ignore node/yarn artifacts
+node_modules/
+yarn-error.log
+
+# Ignore byebug command history
+.byebug_history
+
+# Ignore public/packs and builds (Webpacker, jsbundling-rails, propshaft)
+public/packs
+public/assets
+public/builds
+
+# Ignore storage (ActiveStorageなど)
+storage/*
+!/storage/.keep
+
+# Ignore system test files
+tmp/capybara*
+tmp/pids
+tmp/sockets
+
+# Ignore SQLite db (not used in production, but just in case)
+*.sqlite3
+*.sqlite3-journal
+
+# Ignore Docker artifacts
+docker-compose.override.yml
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore other
+*.swp
+*~
