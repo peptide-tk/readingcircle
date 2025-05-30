@@ -61,3 +61,7 @@ Thumbs.db
 # Ignore other
 *.swp
 *~
+.github/
+.kamal/
+.devcontainer/
+.vscode/
