@@ -1,0 +1,15 @@
+<div class="max-w-xl mx-auto mt-16 p-6 bg-white rounded-xl shadow">
+  <h1 class="text-3xl font-bold mb-4">ReadingCircleへようこそ！</h1>
+  <p>読書会・勉強会・輪読グループの管理・進捗共有ツールです。</p>
+
+  <% if user_signed_in? %>
+    <div class="mt-4">
+      <%= link_to "グループ一覧へ", groups_path, class: "text-blue-500 underline" %>
+    </div>
+  <% else %>
+    <div class="mt-4">
+      <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "btn btn-secondary ml-2" %>
+    </div>
+  <% end %>
+</div>
