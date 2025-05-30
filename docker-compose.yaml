@@ -15,6 +15,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    command: ["./entrypoints/rails.sh"]
     volumes:
       - .:/app
     ports:
