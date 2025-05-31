@@ -26,3 +26,5 @@ services:
       DATABASE_URL: postgres://postgres:password@db:5432/readingcircle_development
       RAILS_ENV: development
     user: "root"
+    tty: true
+    stdin_open: true

@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
-if [ ! -f /app/Gemfile.lock ] || ! cmp -s /app/Gemfile.lock /usr/local/bundle/Gemfile.lock; then
-  echo "===> Running bundle install..."
-  bundle install
-fi
-# yarn install
+bundle check || bundle install
 
-exec bin/rails server -b 0.0.0.0
+rm -f tmp/pids/server.pid
+
+exec bin/dev
