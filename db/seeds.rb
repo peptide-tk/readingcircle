@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+group = Group.create!(name: "テストグループ")
+
+User.create!(
+  email: "test@example.com",
+  password: "password",
+  password_confirmation: "password",
+  group_id: group.id
+)
